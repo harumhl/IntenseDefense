@@ -527,9 +527,9 @@ function pickLane()
 
 // MODAL - will be used to display WIN/LOSE to the user
 window.onload = function(){
-    /*
-        the problem i had with the modal was button wasn't getting defined before we clicked it so we will now assign it when the page is loaded
-    */
+    
+    //    the problem i had with the modal was button wasn't getting defined before we clicked it so we will now assign it when the page is loaded
+    
     var modal = document.getElementById('myModal');
     var modalButton = document.getElementById("myButton");
     var modalSpan = document.getElementsByClassName("close")[0];
@@ -549,7 +549,31 @@ window.onload = function(){
 
 }
 
+// MODAL 2 - same thing as MODAL but without the button to click to display
+/*
+window.onload = function(){
+    
+    //    the problem i had with the modal was button wasn't getting defined before we clicked it so we will now assign it when the page is loaded
+    
+    var modal = document.getElementById('myModal');
+    var modalButton = document.getElementById("myButton");
+    var modalSpan = document.getElementsByClassName("close")[0];
+    modalButton.onclick = function() {
+        modal.style.display = "block";
+    }
 
+    modalSpan.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if(event.target == modal){
+             modal.style.display = "none";
+        }
+    }
+
+}
+*/
 function doMouseDown(event) { // Gets mouse position coordinate when click
     
     // Calculate (x,y) on canvas
