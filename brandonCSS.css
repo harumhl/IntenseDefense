@@ -89,7 +89,7 @@
 }
 
 .modal-content {
-    background-color: ;
+    background-color: white;
     margin: auto; /* 25% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -110,3 +110,4 @@
     text-decoration: none;
     cursor: pointer;
 }
+

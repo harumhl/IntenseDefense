@@ -544,7 +544,6 @@ window.onclick = function(event) {
     }
 }
 
-
 function doMouseDown(event) { // Gets mouse position coordinate when click
     
     // Calculate (x,y) on canvas
