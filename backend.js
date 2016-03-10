@@ -527,6 +527,9 @@ function pickLane()
 
 // MODAL - will be used to display WIN/LOSE to the user
 window.onload = function(){
+    /*
+        the problem i had with the modal was button wasn't getting defined before we clicked it so we will now assign it when the page is loaded
+    */
     var modal = document.getElementById('myModal');
     var modalButton = document.getElementById("myButton");
     var modalSpan = document.getElementsByClassName("close")[0];
