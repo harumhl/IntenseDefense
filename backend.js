@@ -526,23 +526,26 @@ function pickLane()
 
 
 // MODAL - will be used to display WIN/LOSE to the user
-var modal = document.getElementById('myModal');
-var button = document.getElementById("myButton");
-var span = document.getElementsByClassName("close")[0];
-
-button.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if(event.target == modal){
-         modal.style.display = "none";
+window.onload = function(){
+    var modal = document.getElementById('myModal');
+    var modalButton = document.getElementById("myButton");
+    var modalSpan = document.getElementsByClassName("close")[0];
+    modalButton.onclick = function() {
+        modal.style.display = "block";
     }
+
+    modalSpan.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if(event.target == modal){
+             modal.style.display = "none";
+        }
+    }
+
 }
+
 
 function doMouseDown(event) { // Gets mouse position coordinate when click
     
