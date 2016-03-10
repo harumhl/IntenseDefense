@@ -1,12 +1,6 @@
  /* Back-end JS */
 //class Zombie {}
 
-function func(){
-    window.alert("ADFGHSFGJHSFGJ");
-}
-
-
-
 var xMax = 676;
 var yMax = 733;
 var generationsBalancer = 2;
@@ -551,7 +545,6 @@ window.onclick = function(event) {
 }
 
 
-
 function doMouseDown(event) { // Gets mouse position coordinate when click
     
     // Calculate (x,y) on canvas
@@ -577,4 +570,37 @@ function doMouseDown(event) { // Gets mouse position coordinate when click
 	is_tower_selected = false;
     }
     is_tower_selected = false;
+}
+
+
+
+
+// TIMER -- source = http://navaneeth.me/simple-countdown-timer-using-javascript/#.VuDn0fkrKCi
+
+// !!!!!!!!!!!!!!!!!!!!! NEED TO STOP THE TIMER WHEN OFFENSE WINS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML = "Timer : " +
+                    current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            setTimeout(tick, 1000);
+        } 
+        else if ( mins == 0 && seconds == 0){
+            
+        }
+        else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+            }
+        }
+    }
+    tick();
 }

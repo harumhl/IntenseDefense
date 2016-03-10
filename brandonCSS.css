@@ -61,11 +61,8 @@
 }
 
 /* want to try to give the buttons an effect when user clicks on them*/
-/*#button 
-=======
-/* want to try to give the buttons an effect when user clicks on them
+/*
 #button 
->>>>>>> master
 {
   background: url(button.png) no-repeat top;
 }
